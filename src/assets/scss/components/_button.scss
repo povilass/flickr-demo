@@ -1,0 +1,80 @@
+.button {
+  position: relative;
+  min-width: 11.2rem;
+  min-height: 4rem;
+  padding: 0 3rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+  font-weight: 500;
+
+  &.contained {
+    color: $color-white;
+    border: 1px solid transparent;
+
+    &.color-primary {
+      background: $color-primary;
+    }
+
+    &.color-secondary {
+      background: $color-secondary;
+    }
+
+    &.color-inherit {
+      background: inherit;
+    }
+  }
+
+
+  &.outlined {
+    background: $color-white;
+
+    &.color-primary {
+      border: 1px solid $color-primary;
+      color: $color-primary;
+    }
+
+    &.color-secondary {
+      border: 1px solid $color-secondary;
+      color: $color-secondary;
+    }
+
+    &.color-inherit {
+      border: 1px solid inherit;
+      color: inherit;
+    }
+  }
+
+
+  &:hover,
+  &:focus {
+    &.contained {
+      &.color-primary {
+        background: $color-primary-light;
+      }
+
+      &.color-secondary {
+        background: $color-secondary-light;
+      }
+
+      &.color-inherit {
+        background: inherit;
+      }
+    }
+
+    &.outlined {
+      background: $color-grey-light-1;
+    }
+  }
+
+  &.size-large {
+    width: 80%;
+  }
+
+  &.size-small {
+    min-width: auto;
+    padding: 0;
+  }
+}
